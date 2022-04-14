@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Slide Navbar</title>
+	<link rel="stylesheet" href="/static/Style_login.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+        <style>
+        /* Chrome, Safari, Edge, Opera */
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+
+        /* Firefox */
+        input[type=number] {
+          -moz-appearance: textfield;
+        }
+        .other {background-color: #e7e7e7; color: black;}
+    </style>
+</head>
+<body>
+<header class="header" >
+        <nav class="navbar">
+            <a href=Main>Home</a>
+            <a href=Login>Login</a>
+        </nav>
+    </header>
+	<div class="main">
+		<input type="checkbox" id="chk" aria-hidden="true">
+
+			<div class="signup">
+				<form action=Login method="post">
+					<label for="chk" aria-hidden="true">Sign up</label>
+					<input type="text" name="first_name" id="first_name" placeholder="First name" required="" autocomplete="off">
+					<input type="text" name="last_name" id="last_name" placeholder="Last name" required="" autocomplete="off">
+					<input type="email" name="email_" id="email_" placeholder="Email" required="" autocomplete="off">
+                    <input list="d_p1" name="d_p" placeholder="Choose" required="" autocomplete="off">
+                    <datalist id="d_p1">
+                        <option value="Doctor">
+                        <option value="Patient">
+                    </datalist>
+					<input type="password" name="pswd_" id="pswd_" placeholder="Password" required="" autocomplete="off">
+					<button type="submit" name="sign_up" value="sign_up">Sign up</button>
+				</form>
+				<div class="message">
+				{% if message_ %}
+					<p>{{ message_ }}</p>
+				{% endif %}
+				</div>
+			</div>
+
+			<div class="login">
+				<form action=Login method="post">
+					<label for="chk" aria-hidden="true">Login</label>
+					<input type="email" name="email" id="email" placeholder="Email" required="" autocomplete="off">
+					<input type="password" name="pswd" id="pswd" placeholder="Password" required="" autocomplete="off">
+					<button type="submit" name="login" value="login">Login</button>
+				</form>
+				<div class="message">
+				{% if message %}
+					<p>{{ message }}</p>
+				{% endif %}
+				</div>
+			</div>
+	</div>
+</body>
+</html>
