@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+        <link rel="stylesheet" href="/static/Style_Admin.css"/>
+    <style>
+        /* Chrome, Safari, Edge, Opera */
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+
+        /* Firefox */
+        input[type=number] {
+          -moz-appearance: textfield;
+        }
+    </style>
+    <script type="text/javascript">
+        function preventBack() {
+            window.history.forward();
+        }
+
+        setTimeout("preventBack()", 0);
+
+        window.onunload = function () { null };
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <div>
+            All Users Add/Delete<br>
+            <a href=New_Doctor>
+            <img src="{{url_for('send_image', filename = 'pngfind.com-sign-up-icon-png-5304086.png')}}" width="200" height="200">
+            </a>
+            <br>
+        </div>
+        <div>
+            Logout<br>
+            <a href=Login>
+            <img src="{{url_for('send_image', filename = 'pngfind.com-logout-button-png-3396821.png')}}" width="200" height="200">
+            </a>
+            <br>
+        </div>
+    </div>
+
+</body>
+</html>
