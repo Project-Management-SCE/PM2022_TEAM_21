@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% extends 'layout.html' %}
+{% block body %}
+  <div class='row'>
+    <div class='col-5 mx-auto'>
+      <h3>Edit user</h3><hr>
+      <form method='post' action='{{url_for("approval_user",uid=datas.UID)}}'>
+        <div class='form-group'>
+          <label>User Name</label>
+          <input  type='email'   placeholder="sophie@example.com" name='uname' required class='form-control' value='{{datas.UNAME}}'>
+        </div>
+        <div class='form-group'>
+
+          <input type='hidden' name='contact' required class='form-control' value='pending'>
+        </div>
+        <input type='submit' value='Submit' class='btn btn-primary'>
+      </form>
+    </div>
+  </div>
+{% endblock %}
