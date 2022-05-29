@@ -1,17 +1,26 @@
-
 pipeline {
     agent none
     stages {
-        stage('Build') {
-         agent  {
+        stage('Build'){
+               agent  {
                   docker {
                     image 'cimg/base:stable'
                     args '-u root'    }
                       }
+        stage('Test') {
+               agent  {
+                   docker {
+                    image 'python:3.9'}
+                      }
             steps {
-                echo '////Running the project'
-            }
-        }
-       
+                    echo '////Testing pytests'
+                    sh 'python manage.py test Test'
+                    sh 'python manage.py test Change_specialty_Test'
+                    sh 'python manage.py test List_D_Test'
+                    sh 'python manage.py test appp_Test'
+                  }
+         }
+          }
+
     }
 }
