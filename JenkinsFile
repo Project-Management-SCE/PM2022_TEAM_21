@@ -14,10 +14,11 @@ pipeline {
                       }
             steps {
                     echo '////Testing pytests'
-                    sh 'python manage.py test Test'
-                    sh 'python manage.py test Change_specialty_Test'
-                    sh 'python manage.py test List_D_Test'
-                    sh 'python manage.py test appp_Test'
+                    sh 'python Project.py test Test'
+                    sh 'python Change_specialty.py test Change_specialty_Test'
+                    sh 'python List_D.py test List_D_Test'
+                    sh 'python appp.py test appp_Test'
+                    sh 'python A_show_count.py test count_test'
                   }
          }
           }
