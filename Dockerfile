@@ -1,9 +1,9 @@
-FROM python3:3.8
+FROM python:3.8
 ENV PYTHONUNBUFFERED 1
 WORKDIR /code
 COPY requirements.txt /requirements.txt
 ADD . /code
-RUN python3 -m venv /py && \
+RUN python -m venv /py && \
     /py/bin/pip install --upgrade pip && \
     /py/bin/pip install -r /requirements.txt
 ENV PATH="/py/bin:$PATH"
