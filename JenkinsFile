@@ -7,11 +7,6 @@ pipeline {
                     image 'cimg/base:stable'
                     args '-u root'    }
                       }
-        stage('Test') {
-               agent  {
-                   docker {
-                    image 'python:3.9'}
-                      }
             steps {
                     echo '////Testing pytests'
                     sh 'python Project.py test _Test_'
