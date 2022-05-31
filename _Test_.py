@@ -1,7 +1,6 @@
 import unittest
 import Project
 
-
 class MyTestCase(unittest.TestCase):
     def test(self):
         Project.email = 'tot@gmail.com'
