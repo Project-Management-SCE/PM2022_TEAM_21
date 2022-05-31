@@ -2,4 +2,3 @@ flask
 pymongo==3.12.1
 path.py
 googlemaps
-unittest
