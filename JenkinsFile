@@ -14,7 +14,7 @@ pipeline {
                       }
             steps {
                     echo '////Testing pytests'
-                    sh 'python Project.py test Test'
+                    sh 'python Project.py test _Test_'
                     sh 'python Change_specialty.py test Change_specialty_Test'
                     sh 'python List_D.py test List_D_Test'
                     sh 'python appp.py test appp_Test'
