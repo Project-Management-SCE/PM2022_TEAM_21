@@ -1,12 +1,7 @@
 pipeline {
-    agent none
+    agent { Dockerfile true }
     stages {
-        stage('Build'){
-               agent  {
-                  docker {
-                    image 'cimg/base:stable'
-                    args '-u root'    }
-                      }
+        stage('Test') {
             steps {
                     echo '////Testing pytests'
                     sh 'python Project.py test _Test_'
@@ -19,4 +14,3 @@ pipeline {
           }
 
     }
-}
