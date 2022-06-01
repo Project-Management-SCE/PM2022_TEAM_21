@@ -39,4 +39,4 @@ When you run the code you will see this pages :
         6) Cancel Order - the patient can cancel his order just in case that the doctor did not approve 
         7) Logout
 
-Thanks that you using this code :) 
+Thanks yor for using this code :) 
