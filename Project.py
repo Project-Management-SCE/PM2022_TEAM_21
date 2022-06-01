@@ -1088,7 +1088,7 @@ def Order_Doctor():
         result = cursor.execute(addresses_of_doctors, (Admin,Patient,status,)).fetchall()
 
         # # find distance
-        API_KEY = 'AIzaSyAnvbtvxM2Yq6xATgorTR1_ukymn3Ana1k'
+        API_KEY = 'your API'
         gmaps = googlemaps.Client(key=API_KEY)
         # map_clinet = googlemaps.Client(API_KEY)
         def calc_distance_of_two_points(origin, destination):
