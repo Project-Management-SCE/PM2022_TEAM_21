@@ -7,7 +7,7 @@ First of all if you want to use our project you must download the files and put 
 	4) .idea
 	5) Project.py
 
-Then in the file Project.py go to line 1091 and put an API_KEY, you will use this api to calculate distance using googlemaps.
+Then in the file Project.py go to line 1091 and put an API_KEY, you will use this api to calculate distance using googlemaps if you Login like patient.
 
 When you run the code you will see this pages :
 
