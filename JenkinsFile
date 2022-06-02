@@ -5,6 +5,7 @@ pipeline {
     stages {
         stage('install dependencies') {
             steps {
+                sh 'microdnf install yum'
                 sh 'yum install unixODBC-devel'
                 sh 'python -m pip install -r requirements.txt'
             }
