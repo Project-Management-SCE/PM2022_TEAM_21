@@ -5,6 +5,7 @@ pipeline {
     stages {
         stage('install dependencies') {
             steps {
+                sh '!apt install unixodbc-dev --yes'
                 sh 'python -m pip install -r requirements.txt'
             }
             }
